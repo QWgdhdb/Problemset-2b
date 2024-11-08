@@ -1,0 +1,31 @@
+public class StringTools
+{
+    public void lastLetter(String str){
+
+        System.out.println(str.substring(str.length() - 1));
+    }
+    public void middleThree(String str){
+        if(str.length() <= 2){
+            System.out.println(str);
+        }
+        int s = str.length()/2;
+        System.out.println(str.substring(s - 1, s + 2 ));
+    }
+    public String formatPhoneNumber(String str1){
+        return "(" + str1.substring(0,2) + ") " +str1.substring(2,5) + "-" + str1.substring(5,9);
+    }
+    public String swapLastTwo (String str){
+        String s = str.substring(0, str.length() - 2);
+        String s1 = str.substring(str.length() - 1) + str.substring(str.length() - 2, str.length() - 1);
+        return s + s1;
+    }
+    public boolean frontAgain (String str, int n){
+        String first = str.substring(0, n);
+        String last = str.substring(n - str.length());
+        if(first.equals(last)){
+            return true;
+        }
+        return false;
+    }
+
+}
